@@ -8,9 +8,8 @@ a = Analysis(
     pathex=[],
     binaries=[],
     datas=[
-        ('icon.ico', '.'),
-        ('config.json', '.')
-    ],
+    ('config.json', '.')
+],
     hiddenimports=[
         'fitz'
     ],
@@ -40,6 +39,5 @@ exe = EXE(
     bootloader_ignore_signals=False,
     strip=False,
     upx=True,
-    console=False,
-    icon='icon.ico'
+    console=False
 )
