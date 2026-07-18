@@ -2,19 +2,24 @@
 
 block_cipher = None
 
+from PyInstaller.utils.hooks import collect_all
+
+fitz_datas, fitz_binaries, fitz_hiddenimports = collect_all('fitz')
+
 
 a = Analysis(
     ['main.py'],
     pathex=[],
-    binaries=[],
+    binaries=fitz_binaries,
     datas=[
-    ('config.json', '.')
-],
+        ('config.json', '.')
+    ] + fitz_datas,
     hiddenimports=[
-    'fitz',
-    'gui',
-    'pdf_processor'
-],
+        'fitz',
+        'frontend',
+        'gui',
+        'pdf_processor'
+    ] + fitz_hiddenimports,
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],
