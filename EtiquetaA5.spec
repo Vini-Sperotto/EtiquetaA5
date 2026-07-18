@@ -11,8 +11,10 @@ a = Analysis(
     ('config.json', '.')
 ],
     hiddenimports=[
-        'fitz'
-    ],
+    'fitz',
+    'gui',
+    'pdf_processor'
+],
     hookspath=[],
     hooksconfig={},
     runtime_hooks=[],

@@ -27,7 +27,7 @@ jobs:
 
       - name: Build EXE
         run: |
-          pyinstaller EtiquetaA5.spec
+          pyinstaller --clean EtiquetaA5.spec
 
       - name: Upload EXE
         uses: actions/upload-artifact@v4
