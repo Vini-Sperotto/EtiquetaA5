@@ -1,4 +1,3 @@
-```python
 import tkinter as tk
 from tkinter import filedialog
 from pdf_processor import process_pdf
@@ -89,4 +88,3 @@ def start_app():
     ).pack(pady=15)
 
     root.mainloop()
-```
